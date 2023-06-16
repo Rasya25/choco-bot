@@ -17,18 +17,21 @@ global.apikey = '' // AMBIL DI LOLHUMAN
 global.rosekey = 'cba86fac49e37d63f9bd4561' // ROSE
 
 //—————「 Set Nama Bot & Own 」—————//
-global.namabot = 'ᴋᴏɴᴇᴋᴏ-ᴍᴅ'
-global.namaowner = '𝚔𝚘𝚒'
-global.wagc = "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk"
+global.namabot = 'Keqing-MD'
+global.namaowner = 'choco'
+global.wagc = "-"
 
 //—————「 Setting Owner 」—————//
 global.owner = ['6285791346128']
-global.nomerowner = '6285791346128'
+global.nomerowner = '+62 857-9134-6128'
 global.premium = ['6285791346128']
 
+//—————「 Set Donate 」—————//
+global.dana = '085791346128'
+global.pulsa1 = '-'
 //—————「 Set Wm 」—————//
-global.packname = 'ᴋᴏɴᴇᴋᴏ-ᴍᴅ'
-global.author = 'Bot: +62 895-3253-44177\nYouTube: QyuuNee\nInstagram: iamunderox_'
+global.packname = 'Keqing-MD'
+global.author = 'By choco'
 global.prefa = ['', '.']
 global.sp = '•'
 
@@ -54,7 +57,7 @@ global.limitawal = {
 
 //—————「 Set Image 」—————//
 global.imageurl = 'https://telegra.ph/file/bcb6c6bfa6dcb7c87bd78.jpg'
-global.link = 'https://youtu.be/dOycbiwwVo0'
+global.link = 'https://github.com/Rasya25'
 global.thumb = fs.readFileSync('./media/koneko.jpg')
 
 //—————「 Batas Akhir 」—————//

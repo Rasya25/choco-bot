@@ -1,7 +1,7 @@
 /*
     Created & Base By ArxzyDev
     Jual Sc? Neraka Paling Bawah
-    My Contact https://wa.me/6288210828960
+    My Contact https://wa.me/6285791346128
     
    Notes:
    Jika Ingin Recode Silakan Tapi Ingat Creditnya
@@ -62,7 +62,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         const botNumber = await conn.decodeJid(conn.user.id)
         const sender = m.isGroup ? (m.key.participant ? m.key.participant : m.participant) : m.key.remoteJid
         const mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
-        const isCreator = [botNumber, ...global.owner, '6288210828960@s.whatsapp.net'].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isCreator = [botNumber, ...global.owner, '6285791346128@s.whatsapp.net'].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
         const fatkuns = (m.quoted || m)
@@ -82,7 +82,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
     	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
 
-        // Days
+        // hari
         const hariini = moment.tz('Asia/Jakarta').format('dddd, DD MMMM YYYY')
         const wib = moment.tz('Asia/Jakarta').format('HH : mm : ss')
         const wit = moment.tz('Asia/Jayapura').format('HH : mm : ss')
@@ -110,6 +110,34 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         if(time2 < "03:00:00"){
         var ucapanWaktu = 'Selamat Tengah Malam 🌃'
         }
+        // countdown make by choco
+        // Tanggal target
+var targetDate = new Date("July 25, 2023").getTime();
+
+// Memperbarui hitungan mundur setiap 1 detik
+var countdown = setInterval(function() {
+  // Mendapatkan tanggal dan waktu saat ini
+  var now = new Date().getTime();
+
+  // Menghitung selisih antara waktu sekarang dengan waktu target
+  var difference = targetDate - now;
+
+  // Menghitung hari, jam, menit, dan detik
+  var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  // Menampilkan hitungan mundur
+  console.log("Sisa waktu: " + days + " hari, " + hours + " jam, " + minutes + " menit, " + seconds + " detik.");
+
+  // Memeriksa apakah sudah mencapai tanggal target
+  if (difference < 0) {
+    clearInterval(countdown);
+    console.log("Waktu telah berakhir!");
+  }
+}, 1000);
+
         
         const fkontak = {
             key: {
@@ -121,7 +149,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
             message: {
                 'contactMessage': {
                     'displayName': `${namaowner}`,
-                    'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;Koi,;;;\nFN:Koneko-MD\nitem1.TEL;waid=${owner}:+${nomerowner}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+                    'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;Koi,;;;\nFN:Keqing-MD\nitem1.TEL;waid=${owner}:+${nomerowner}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
                     'jpegThumbnail': thumb,
                     thumbnail: thumb,
                     sendEphemeral: true
@@ -156,7 +184,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         }
         
 
-        // Function Created By Koneko-MD Alias Dryan ft .𝐗𝐓𝐑𝐀𝐌
+        // Function Created By Keqing-MD Alias Chocozy
 function pickRandom(list) {
     return list[Math.floor(list.length * Math.random())]
 }
@@ -182,7 +210,7 @@ stringArrayThreshold: 1
 );
 const result = {
 status: 200,
-author: `Koneko-MD`,
+author: `Keqing-MD`,
 result: obfuscationResult.getObfuscatedCode()
 }
 resolve(result)
@@ -659,8 +687,11 @@ user.afkReason = ''
             	newReply(`The bot has been active for a long time\n*${runtime(process.uptime())}*`)
         break
 
-case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode':
-newReply(`*「  ᴋᴏɴᴇᴋᴏ-ᴍᴅ ꜱᴄʀɪᴘᴛ  」*\n\n*YouTube:*\n*https://youtube.com/@qyuunee*\n\n*Dont forget to donate yeah* 🍜 `)
+case 'sc': case 'script': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode':
+newReply(`*「  Keqing-MD Script  」*\n\n*YouTube:*\n*Chocozyzy*\n\n*Dont forget to donate yeah* 🍜 `)
+        break
+        case 'donate': case 'donasi':
+        newReply(`*「  Keqing-MD Donate  」\n\n*Dana:* ${dana}`)
         break
         
         case 'totalfitur':
@@ -1522,7 +1553,7 @@ break
             break
             
             case 'gimage': {
-                if (!text) return newReply(`Contoh : ${prefix + command} Koneko-MD`)
+                if (!text) return newReply(`Contoh : ${prefix + command} Keqing-MD`)
                 newReply(mess.wait)
                 if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 5 // -1 limit
@@ -1802,7 +1833,7 @@ break
 			// AI MENU
 
 			case 'ai':
-			if (args.length == 0) return newReply(`Example: ${prefix + command} siapa megalodon 🗿`)
+			if (args.length == 0) return newReply(`Example: ${prefix + command} siapakah presiden jepang?`)
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit) // respon ketika limit habis
                 db.data.users[m.sender].limit -= 5
 			newReply(mess.wait)
@@ -1930,7 +1961,7 @@ break
             
             case 'attp':
                 try {
-                if (args.length == 0) return newReply(`Example: ${prefix + command} Koneko-MD`)
+                if (args.length == 0) return newReply(`Example: ${prefix + command} Keqing-MD`)
                 await conn.sendMessage(m.chat, {sticker: {url:`https://api.lolhuman.xyz/api/attp?apikey=${apikey}&text=${full_args}` }}, { quoted: m })
             } catch (e) {
                 newReply(mess.error)
@@ -1938,7 +1969,7 @@ break
             break
             case 'attp2':
                 try {
-                    if (args.length == 0) return newReply(`Example: ${prefix + command} Koneko-MD`)
+                    if (args.length == 0) return newReply(`Example: ${prefix + command} Keqing-MD`)
                     await conn.sendMessage(m.chat, {sticker: {url:`https://api.lolhuman.xyz/api/attp2?apikey=${apikey}&text=${full_args}` }}, { quoted: m })
                 } catch (e) {
                     newReply(mess.error)
@@ -1946,7 +1977,7 @@ break
             break
             case 'ttp':
                 try {
-                    if (args.length == 0) return newReply(`Example: ${prefix + command} Koneko-MD`)
+                    if (args.length == 0) return newReply(`Example: ${prefix + command} Keqing-MD`)
                     await conn.sendMessage(m.chat, {sticker: {url:`https://api.lolhuman.xyz/api/ttp?apikey=${apikey}&text=${full_args}` }}, { quoted: m })
                 } catch (e) {
                     newReply(mess.error)
@@ -1997,7 +2028,7 @@ break
             newReply(mess.wait)
             let media = await conn.downloadMediaMessage(qmsg)
             let audio = await toAudio(media, 'mp4')
-            conn.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By Koneko-MD.mp3`}, { quoted : m })
+            conn.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By Keqing-MD.mp3`}, { quoted : m })
             
             }
             break
@@ -2084,7 +2115,7 @@ break
 			break
 			
 			case 'ghstalk': {
-			if (args.length == 0) return newReply(`Example: ${prefix + command} Koneko-MD`)
+			if (args.length == 0) return newReply(`Example: ${prefix + command} Keqing-MD`)
 			newReply(mess.wait)
 			axios.get(`https://api.lolhuman.xyz/api/github/${args[0]}?apikey=${apikey}`).then(({ data }) => {
 				var caption = `Name : ${data.result.name}\n`
@@ -2165,7 +2196,7 @@ break
 	        case 'bucinsertifikat':
 		    case 'sertifikatbucin':
 			case 'bucincert':
-				if (args.length == 0) return newReply(`Example: ${prefix + command} Justimun Kentod`)
+				if (args.length == 0) return newReply(`Example: ${prefix + command} XyFake`)
 				newReply(mess.wait)
 				kueri = args.join(" ")
                 conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/bucinserti?apikey=${apikey}&name=${kueri}`}, caption: 'Sertifikatnya kack'}, {quoted: m})
@@ -2174,7 +2205,7 @@ break
 			case 'tololsert':
 			case 'tololcert':
 			case 'tololsertifikat':
-			if (args.length == 0) return newReply(`Example: ${prefix + command} Justimun Kentod`)
+			if (args.length == 0) return newReply(`Example: ${prefix + command} XyFake`)
 			newReply(mess.wait)
 			ytta = args.join(" ")
             conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/toloserti?apikey=${apikey}&name=${ytta}`}, caption: 'Sertifikatnya kack'}, {quoted: m})
@@ -2192,9 +2223,9 @@ break
             break
 	        
 	        case 'carbon':
-	            if (!q) return newReply(`Example: ${prefix + command} const adrian = required('adrian-api')`)
+	            if (!q) return newReply(`Example: ${prefix + command} const keqing = required('keqing-api')`)
 	            newReply(mess.wait)
-	            conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/carbon?apikey=${apikey}&code=${q}&language=nodejs`}, caption: `Created By Koneko-MD\n\n\nCode:\n\n${q}`}, {quoted: m})
+	            conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/carbon?apikey=${apikey}&code=${q}&language=nodejs`}, caption: `Created By Keqing-MD\n\n\nCode:\n\n${q}`}, {quoted: m})
 	        break
 	     
 	    // Ephoto1
@@ -2228,11 +2259,11 @@ break
 		case 'goldplaybutton':
 		case 'silverplaybutton':
 		case 'freefire':
-			if (args.length == 0) return reply(`Example: ${prefix + command} Koneko-MD `)
+			if (args.length == 0) return reply(`Example: ${prefix + command} Keqing-MD `)
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit) // respon ketika limit habis
             db.data.users[m.sender].limit -= 2 // -1 limit
 			newReply(mess.wait)
-			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${apikey}&text=${args}`}, caption: `Created By Koneko-MD\n\n Type: ${command}\n\nText: ${args}`})
+			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${apikey}&text=${args}`}, caption: `Created By Keqing-MD\n\n Type: ${command}\n\nText: ${args}`})
 			break
 
         case 'shadow':
@@ -2259,11 +2290,11 @@ break
 		case 'flamming':
 		case 'harrypotter':
 		case 'carvedwood':
-			if (args.length == 0) return reply(`Example: ${prefix + command} Koneko-MD`)
+			if (args.length == 0) return reply(`Example: ${prefix + command} Keqing-MD`)
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit) // respon ketika limit habis
             db.data.users[m.sender].limit -= 2 // -1 limit
 			newReply(mess.wait)
-			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apikey}&text=${args}`}, caption: `Created By Koneko-MD\n\n Type: ${command}\n\nText: ${args}`})
+			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${apikey}&text=${args}`}, caption: `Created By Keqing-MD\n\n Type: ${command}\n\nText: ${args}`})
 			break
 
     // Text Prome
@@ -2277,11 +2308,11 @@ break
 		case 'wolflogo':
 		case 'steel3d':
 		case 'wallgravity':
-			if (args.length == 0) return reply(`Example: ${prefix + command} Koneko-MD`)
+			if (args.length == 0) return reply(`Example: ${prefix + command} Keqing-MD`)
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit) // respon ketika limit habis
             db.data.users[m.sender].limit -= 4 // -1 limit
 			newReply(mess.wait)
-			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/textprome2/${command}?apikey=${apikey}&text1=${args[0]}&text2=${args[1]}`}, caption: `Created By Koneko-MD\n\n Type: ${command}\n\nText: ${args}`})
+			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/textprome2/${command}?apikey=${apikey}&text1=${args[0]}&text2=${args[1]}`}, caption: `Created By Keqing-MD\n\n Type: ${command}\n\nText: ${args}`})
 			break
 
         case 'blackpink':
@@ -2316,11 +2347,11 @@ break
 		case 'summersand':
 		case 'horrorblood':
 		case 'thunder':
-			if (args.length == 0) return newReply(`Example: ${prefix + command} Koneko-MD`)
+			if (args.length == 0) return newReply(`Example: ${prefix + command} Keqing-MD`)
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit) // respon ketika limit habis
             db.data.users[m.sender].limit -= 2 // -1 limit
 			newReply(mess.wait)
-			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/textprome/${command}?apikey=${apikey}&text=${args}` }, caption: `Created By Koneko-MD\n\n Type: ${command}\n\nText: ${args}`})
+			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/textprome/${command}?apikey=${apikey}&text=${args}` }, caption: `Created By Keqing-MD\n\n Type: ${command}\n\nText: ${args}`})
 			break
 	    
 	    case 'akira':
@@ -2470,25 +2501,25 @@ break
             case 'logo1':
             if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit)
             db.data.users[m.sender].limit -= 2
-            if (!text) return reply(`Example: ${prefix + command} Koneko-MD`)
+            if (!text) return reply(`Example: ${prefix + command} Keqing-MD`)
 			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/ephoto1/fpslogo?apikey=${lolhuman}&text=${text}` } })
 			break
 			case 'logo2':
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit)
             db.data.users[m.sender].limit -= 2
-            if (!text) return reply(`Example: ${prefix + command} Koneko-MD`)
+            if (!text) return reply(`Example: ${prefix + command} Keqing-MD`)
 			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/ephoto1/logogaming?apikey=${lolhuman}&text=${text}` } })
 			break
 			case 'logo3':
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit)
             db.data.users[m.sender].limit -= 2
-            if (!text) return reply(`Example: ${prefix + command} Koneko-MD`)
+            if (!text) return reply(`Example: ${prefix + command} Keqing-MD`)
 			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/ephoto1/metallogo?apikey=${lolhuman}&text=${text}` } })
 			break
 			case 'logo4':
 			if (!isPremium && global.db.data.users[m.sender].limit < 1) return newReply(mess.endLimit)
             db.data.users[m.sender].limit -= 2
-            if (!text) return reply(`Example: ${prefix + command} Koneko-MD`)
+            if (!text) return reply(`Example: ${prefix + command} Keqing-MD`)
 			conn.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/textprome/jokerlogo?apikey=${lolhuman}&text=${args[0]}` } })
 			break
             
@@ -2904,13 +2935,14 @@ case 'help': {
   ☍ *Total Premium:* ${prem.length}
   ☍ *Total Banned:* ${ban.length}
   ☍ *Total Fitur:* ${totalFitur()}
+  ☍ *Ultah Owner:* Hari ${days} Jam ${hours} Menit ${minutes} Detik ${seconds}
   
 ▧ 「 *I N F O  U S E R* 」
 
    ☍ *Name:* ${pushname}
    ☍ *Number:* ${m.sender.split('@')[0]}
    ☍ *Status:* ${isCreator ? "Owner 🥶" : "User ⭐"}
-   ☍ *User:* ${isPremium ? 'Premium 🥶' : 'Gratisan ⭐'}
+   ☍ *User:* ${isPremium ? 'Premium 🥶' : 'Free ⭐'}
    ☍ *Limit:* ${isCreator ? 'Unlimited 🥶' : `${db.data.users[m.sender].limit}⭐`}
    
 ${readmore}
@@ -2945,7 +2977,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3459,7 +3491,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/b7e05577fb1feb9c3fed4.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3528,7 +3560,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3590,7 +3622,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3636,7 +3668,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3686,7 +3718,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3756,7 +3788,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3817,7 +3849,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3864,7 +3896,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3925,7 +3957,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -3973,7 +4005,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4029,7 +4061,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4076,7 +4108,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4125,7 +4157,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4174,7 +4206,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4243,7 +4275,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4306,7 +4338,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4377,7 +4409,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4426,7 +4458,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4466,7 +4498,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4526,7 +4558,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4609,7 +4641,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4660,7 +4692,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4704,7 +4736,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4745,7 +4777,7 @@ conn.sendMessage(m.chat, {
       externalAdReply: {
         showAdAttribution: true, 
         title: `${ucapanWaktu} ${pushname}`,
-        body: "ᴋᴏɴᴇᴋᴏ-ᴍᴅ",
+        body: "Keqing-MD",
         thumbnailUrl: "https://telegra.ph/file/46680bf8f4b70042b14fa.jpg",
         sourceUrl: "https://chat.whatsapp.com/Cf5wYQbDK8cDnolIkPruwk",
         mediaType: 1,
@@ -4808,7 +4840,7 @@ break
     } catch (err) {
 console.log(util.format(err))
 let e = String(err)
-conn.sendMessage("6288210828960@s.whatsapp.net", { text: "👋🏻 Hello developer, ada yang error nih! di bagian " + util.format(e), 
+conn.sendMessage("6285791346128@s.whatsapp.net", { text: "👋🏻 Hello developer, ada yang error nih! di bagian " + util.format(e), 
 contextInfo:{
 forwardingScore: 9999999, 
 isForwarded: true

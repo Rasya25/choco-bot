@@ -146,7 +146,7 @@ async function startAdrian() {
                             title: `${namabot}`,
                             body: `${namaowner}`,
                             thumbnailUrl: ppgroup,
-                            sourceUrl: "https://instagram.com/iamunderox_",
+                            sourceUrl: "https://instagram.com/r.rdtyptr",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -163,7 +163,7 @@ async function startAdrian() {
                             title: `${namabot}`,
                             body: `${namaowner}`,
                             thumbnailUrl: ppgroup,
-                            sourceUrl: "https://instagram.com/iamunderox_",
+                            sourceUrl: "https://instagram.com/r.rdtyptr",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -180,7 +180,7 @@ async function startAdrian() {
                             title: `${namabot}`,
                             body: `${namaowner}`,
                             thumbnailUrl: ppgroup,
-                            sourceUrl: "https://instagram.com/iamunderox_",
+                            sourceUrl: "https://instagram.com/r.rdtyptr",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -197,7 +197,7 @@ async function startAdrian() {
                             title: `${namabot}`,
                             body: `${namaowner}`,
                             thumbnailUrl: ppgroup,
-                            sourceUrl: "https://instagram.com/iamunderox_",
+                            sourceUrl: "https://instagram.com/r.rdtyptr",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -214,7 +214,7 @@ async function startAdrian() {
                             title: `${namabot}`,
                             body: `${namaowner}`,
                             thumbnailUrl: ppgroup,
-                            sourceUrl: "https://instagram.com/iamunderox_",
+                            sourceUrl: "https://instagram.com/r.rdtyptr",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -231,7 +231,7 @@ async function startAdrian() {
                             title: `${namabot}`,
                             body: `${namaowner}`,
                             thumbnailUrl: ppgroup,
-                            sourceUrl: "https://instagram.com/iamunderox_",
+                            sourceUrl: "https://instagram.com/r.rdtyptr",
                             mediaType: 1,
                             renderLargerThumbnail: true
                         }
@@ -269,7 +269,7 @@ async function startAdrian() {
          title: `${namabot}`,
          body: `${namaowner}`,
          thumbnailUrl: ppuser,
-         sourceUrl: "https://instagram.com/iamunderox_",
+         sourceUrl: "https://instagram.com/r.rdtyptr",
          mediaType: 1,
          renderLargerThumbnail: true
     }}})
@@ -283,7 +283,7 @@ async function startAdrian() {
          title: `${namabot}`,
          body: `${namaowner}`,
          thumbnailUrl: ppuser,
-         sourceUrl: "https://instagram.com/iamunderox_",
+         sourceUrl: "https://instagram.com/r.rdtyptr",
          mediaType: 1,
          renderLargerThumbnail: true
     }}})
@@ -296,7 +296,7 @@ async function startAdrian() {
          title: `${namabot}`,
          body: `${namaowner}`,
          thumbnailUrl: ppuser,
-         sourceUrl: "https://instagram.com/iamunderox_",
+         sourceUrl: "https://instagram.com/r.rdtyptr",
          mediaType: 1,
          renderLargerThumbnail: true
     }}})
@@ -309,7 +309,7 @@ async function startAdrian() {
          title: `${namabot}`,
          body: `${namaowner}`,
          thumbnailUrl: ppuser,
-         sourceUrl: "https://instagram.com/iamunderox_",
+         sourceUrl: "https://instagram.com/r.rdtyptr",
          mediaType: 1,
          renderLargerThumbnail: true
     }}})
@@ -404,7 +404,7 @@ try{
 			lolcatjs.fromString(`[Sedang mengkoneksikan]`)
 		}
 		if (update.connection == "open" || update.receivedPendingNotifications == "true") {
-			lolcatjs.fromString(`[Connecting to] WhatsApp web`)
+			lolcatjs.fromString(`[Connecting to Server] WhatsApp web`)
 			lolcatjs.fromString(`[Connected] ` + JSON.stringify(conn.user, null, 2))
 		}
 	
